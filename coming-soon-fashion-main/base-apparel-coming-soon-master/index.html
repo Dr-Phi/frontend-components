@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <!-- Josefin Sans Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+
+  <title>coming soon page</title>
+
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="desktop" class="effect5">
+    <header><img src="./images/logo.svg" alt="logo brand"></header>
+
+
+    <picture>
+      <source media="(min-width:800px)" srcset="./images/hero-desktop.jpg">
+      <source media="(min-width:370px)" srcset="./images/hero-mobile.jpg">
+      <img srcset="./images/hero-mobile.jpg" style="width:auto;">
+    </picture>
+
+    <section >
+
+      <p class="title one">WE'RE</p>
+      <p class="title two">COMING</p>
+      <p class="title two">SOON</p>
+
+      <p id="description">Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+
+      <form action="/action_page.php">
+        <div id="form">
+          <input type="text" id="email" name="email" placeholder="Email Address">
+          <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" id="btn">
+              <path fill="none" stroke="#FFF" stroke-width="2" d="M1 1l8.836 8.836L1 18.671" />
+            </svg></button>
+        </div>
+        <div id="error-msg"></div>
+      </form>
+
+    </section>
+  </div>
+
+  <footer>
+    <p class="attribution">
+      Coded by <a href="https://github.com/Dr-Phi" target="_blank">Dr-Phi</a>.
+    </p>
+  </footer>
+  <script src="./index.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,254 @@
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+
+/* Real styles */
+
+@font-face {
+  font-family: myFont;
+  src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf),
+  local(Verdana);
+}
+.fs-400 {
+  font-size: 1.3rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: hsl(241, 100%, 89%);
+  font-family: myFont, Helvetica,
+    sans-serif ;
+    font-size: 18px;
+}
+#component {
+  display: flex;
+  box-shadow: 10px 10px 40px -25px hsl(224, 30%, 27%);
+  border-radius: 2rem;
+}
+
+header {
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  flex-grow: 1;
+  max-width: 19.5rem;
+  text-align: center;
+  border-radius: inherit;
+}
+
+h2.fs-400{
+  padding: 1.5rem 0;
+}
+
+
+#circle-bg {
+  margin: 0 auto;
+  background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    width: 10.2rem ;
+    height: 10.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+#circle-bg p {
+  color: hsl(0, 0%, 100%);
+  font-size: 4rem;
+  font-weight: 800;
+  margin-inline: auto;
+}
+#circle-bg span {
+  font-size: 15px;
+  font-weight: 400;
+  display: block;
+  margin-top: -12.8px;
+  color: hsl(241, 100%, 89%);
+}
+
+h3 {
+  padding-top: 1.3rem;
+
+  color:hsl(0, 0%, 100%);
+  font-size: 1.6rem;
+}
+
+h3 + p {
+  font-size: 16px;
+  padding-inline: 2.4rem;
+  margin-top: .8rem;
+}
+
+
+article {
+  flex-grow: 1;
+  min-width: 24rem;
+  color: hsl(224, 30%, 27%);
+  padding: 1rem 2.3rem 1rem;
+}
+
+h1.fs-400{
+  padding-top: .4rem;
+  margin-bottom: 1.2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1rem;
+  padding: .7rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.score span {
+  color: hsl(224, 30%, 27%);
+  padding-right: .5rem;
+}
+
+.score p {
+  color: hsl(240, 24%, 72%);
+}
+
+.score{
+  margin-left: auto;
+  padding-right: .3rem;
+}
+
+.card1 {
+  color: hsl(0, 100%, 67%);
+  background-color: hsla(0, 100%, 67%, .1);
+}
+.card2 {
+  color: hsl(39, 100%, 56%);
+  background-color: hsla(39, 100%, 56%, .1);
+}
+.card3 {
+  color: hsl(166, 100%, 37%);
+  background-color: hsla(166, 100%, 37%, .1);
+}
+.card4 {
+  color: hsl(234, 85%, 45%);
+  background-color: hsla(234, 85%, 45%, .1);
+}
+
+#results {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+button {
+  display: block;
+  margin: 2rem auto 1rem;
+  color: white;
+  background-color: hsl(224, 30%, 27%);
+  padding: .7rem 7rem;
+  border-radius: 1.5rem;
+  border: none;
+}
+
+button:hover{
+  cursor: pointer;
+  background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsl(241, 81%, 54%));;
+}
+
+.attribution {
+  margin-top: 5rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 600px) {
+  #component {
+    display: initial;
+    text-align: center;
+    margin: 0 auto;
+  }
+  header {
+    padding-top: 5rem;
+    min-width: 100%;
+  }
+  h3 + p {
+    padding-bottom: 2rem;
+  }
+}

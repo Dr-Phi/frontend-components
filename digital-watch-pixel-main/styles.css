@@ -1,0 +1,214 @@
+/* Normalizing CSS*/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* My own styles*/
+body {
+  font-family: 'VT323', monospace;
+  font-size: 2rem;
+
+}
+#header {
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  #header {
+    text-align: center;
+  }
+
+  #clock {
+    position: relative;
+    width: 100%;
+    height: 56.3vh;
+    background-image: url('./img_base.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #cd9234;
+  }
+
+  #myLabel {
+    font-size: 7.5vw;
+    color: #fae133;
+    position: absolute;
+    top: 46%;
+    width: 102%;
+    text-align: center;
+    text-shadow: .1rem 5px 2px black,
+      0 .1rem 25px #00cfff,
+      0 0 5px #1f43b0;
+  }
+
+  #amPm {
+    font-size: 5vw;
+    color: #fae133;
+    position: absolute;
+    top: 41%;
+    width: 122%;
+    text-align: center;
+  }
+
+  #day {
+    font-size: 4vw;
+    color: #fae133;
+    position: absolute;
+    top: 57%;
+    width: 91%;
+    text-align: center;
+  }
+
+  .qRight {
+    text-align: right;
+    padding: 1rem .7rem;
+    border-bottom: 4px double black;
+  }
+  .divCat{
+    padding: 1rem 2rem;
+    display: flex;
+  }
+
+  #randomQ {
+    border: 3px solid #1b3878;
+    border-radius: 10px;
+    max-height: 4rem;
+    margin-right: 5rem;
+    
+  }
+  #target {
+    display: inline-flex;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 1rem;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  #clock {
+      position: relative;
+      width: 100%;
+      height: 56.3vh;
+      background-image: url('./img_base.jpg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-color: #cd9234;
+      margin-left: auto;
+      margin-right: auto;
+      
+    }
+  
+    #myLabel {
+      font-size: 2.5vw;
+        color: #fae133;
+        position: absolute;
+        top: 46%;
+        width: 101%;
+        text-align: center;
+        text-shadow: .1rem 5px 2px black, 0 .1rem 25px #00cfff, 0 0 5px #1f43b0;
+    }
+  
+    #amPm {
+      font-size: 1.6vw;
+        color: #fae133;
+        position: absolute;
+        top: 41%;
+        width: 107%;
+        text-align: center;
+    }
+  
+    #day {
+      font-size: 1.1rem;
+        color: #fae133;
+        position: absolute;
+        top: 56%;
+        width: 98%;
+        text-align: center;
+    }
+}
